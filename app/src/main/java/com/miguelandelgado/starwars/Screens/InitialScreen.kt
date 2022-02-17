@@ -25,7 +25,7 @@ fun InitialScreen(navController: NavController){
     Box {
         Image(
             painter = painterResource(R.drawable.title),
-            contentDescription = "background_image",
+            contentDescription = "titulo",
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.FillBounds
         )
@@ -46,9 +46,11 @@ fun BodyContent(navController: NavController){
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Button(onClick ={
-            navController.navigate(route = AppScreens.MenuScreen.route + "/Esto es un parametro")
-        }) {
-            Text("Entrar")
+            navController.navigate(route = AppScreens.MenuScreen.route)
+        },
+            colors = ButtonDefaults.buttonColors(backgroundColor = MaterialTheme.colors.onSurface))
+        {
+            Text("ENTRAR")
         }
 
     }
